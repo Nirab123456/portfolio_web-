@@ -1,0 +1,54 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  --bs-primary: #1c3dca;
+  --bs-primary-rgb: 28,61,202;
+  --bs-info: #02aaff;
+  --bs-info-rgb: 2,170,255;
+  --bs-dark: #131416;
+  --bs-dark-rgb: 19,20,22;
+  --bs-body-color: var(--bs-white);
+  --bs-body-bg: var(--bs-dark);
+  --bs-body-font-weight: 300;
+}
+
+.container {
+  height: 100%;
+  max-width: 960px;
+}
+
+.text-badge {
+  padding: .1em .4em;
+  background: var(--bs-dark);
+}
+
+.banner {
+  padding: 2em 1em;
+  text-align: center;
+  background: var(--bs-primary);
+  border-radius: 1em;
+}
+
+.projects {
+  --bs-gutter-y: 1.5rem;
+}
+
+footer {
+  background: var(--bs-gray-900);
+}
+
+@media (min-width: 768px) {
+  h4 {
+  }
+}
+
+h4 {
+}
+
+@media (min-width: 300px) {
+  .col-project {
+  }
+}
+
+.row .section {
+}
+
