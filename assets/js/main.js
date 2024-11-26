@@ -1,4 +1,4 @@
-document.getElementById('submitButton').addEventListener('click', async function () {
+async function pn_detect() {
     const fileInput = document.getElementById('imageUpload');
     const resultDisplay = document.getElementById('resultDisplay');
 
@@ -44,7 +44,7 @@ document.getElementById('submitButton').addEventListener('click', async function
         resultDisplay.innerText = 'Error during prediction. Check console for details.';
         resultDisplay.style.color = "red"; // Show error in red
     }
-});
+}
 
 
         // Add event listener for the submit button
