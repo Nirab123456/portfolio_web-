@@ -18,7 +18,7 @@ async function pn_detect() {
         resultDisplay.innerText = "Processing...";
         resultDisplay.style.color = "blue"; // Reset to default text color while processing
 
-        const response = await fetch('http://localhost:8888/predict', { // Tornado server URL
+        const response = await fetch('https://pneumonia-detectorcpu-production.up.railway.app/predict', { // Tornado server URL
             method: 'POST',
             body: formData
         });
@@ -47,26 +47,65 @@ async function pn_detect() {
 }
 
 
+
+
+    async function  calculateAgeInDays() {
+        // Get the date input value
+        const inputDate = document.getElementById('age').value;
+
+        // Check if a valid date is selected
+        if (!inputDate) {
+            alert("Please select a valid birth date.");
+            return;
+        }
+
+        // Convert the input date (string) into a Date object
+        const birthDate = new Date(inputDate);
+
+        // Get today's date
+        const today = new Date();
+
+        // Calculate the difference in time (milliseconds)
+        const timeDifference = today - birthDate;
+
+        // Convert the difference from milliseconds to days
+        const ageInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        console.log("Age in days:", ageInDays);
+        return ageInDays;
+    }
+
+
+
+
         // Add event listener for the submit button
 
         // Helper function to normalize input data
-        function normalizeInput(input, min, scale) {
+    function normalizeInput(input, min, scale) {
             return (input - min) / scale;
         }
 
         // Argmax function
-        function argmax(array) {
+    async function argmax(array) {
             return array.reduce((maxIndex, value, index, arr) => {
                 return value > arr[maxIndex] ? index : maxIndex;
             }, 0);
         }
 
-// Run model with inputs
+// Define the mapping for prediction indices to hypertension stages
+const hypertensionStages = {
+    0: "Hypertension Stage 1",
+    1: "Hypertension Stage 2",
+    2: "Normal",
+    3: "Elevated"
+};
+
+// Function to run the model
 async function runModel(inputs) {
     try {
         // Load ONNX model
         const session = new onnx.InferenceSession();
-        await session.loadModel('./final_model.onnx'); // Make sure the model file is in the correct path
+        await session.loadModel('./final_model.onnx'); // Ensure the model is in the correct path
 
         // Prepare the input tensor
         const inputTensor = new onnx.Tensor(new Float32Array(inputs), 'float32', [1, 11]);
@@ -75,19 +114,18 @@ async function runModel(inputs) {
         const outputMap = await session.run([inputTensor]);
         const outputData = outputMap.values().next().value.data;
 
-
-
         // Perform `argmax` to get the predicted class
         const predictedClass = argmax(outputData);
 
-        console.log("Prediction Output:", Array.from(outputData).join(", "));
-        console.log("Predicted Class:", predictedClass);
+        return predictedClass;
 
     } catch (error) {
-        // Handle errors
+        // Handle errors and update the HTML with an error message
         console.error("Error during model prediction:", error);
+
     }
 }
+
 
 // Submit form and prepare normalized data
 async function CVDsubmitForm() {
@@ -96,7 +134,7 @@ async function CVDsubmitForm() {
     const scaleValues = [12915.0, 1.0, 195.0, 189.0, 90.0, 60.0, 2.0, 2.0, 1.0, 1.0, 1.0];
 
     // Gather input values
-    const age = parseFloat(document.getElementById('age').value); // Ensure the input is parsed as a float
+    const age = await calculateAgeInDays();
 
     console.log("Age:", age);
     let genderIndex;
@@ -142,5 +180,16 @@ async function CVDsubmitForm() {
 
 
     // Run the ONNX model with the normalized inputs
-    await runModel(normalizedInputs);
+    const predicted_class = await runModel(normalizedInputs);
+
+    // Get the hypertension stage using the mapping
+    const predictedStage = hypertensionStages[predicted_class] || "Unknown";
+
+
+    console.log("Predicted Class:", predictedStage);
+
+    // Update the HTML to display the prediction
+    const resultElement = document.getElementById("prediction-result");
+    resultElement.innerHTML = `<strong>Prediction: </strong>${predictedStage}`;
+
 }
