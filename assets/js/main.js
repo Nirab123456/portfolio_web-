@@ -18,10 +18,10 @@ async function pn_detect() {
         resultDisplay.innerText = "Processing...";
         resultDisplay.style.color = "blue"; // Reset to default text color while processing
 
-        const response = await fetch('https://pneumonia-detectorcpu-production.up.railway.app/predict', { // Tornado server URL
-            method: 'POST',
-            body: formData
-        });
+    const response = await fetch('https://pneumonia-detectorcpu-production.up.railway.app/predict', { // Tornado server URL
+        method: 'POST',
+        body: formData
+    });
 
         if (!response.ok) {
             throw new Error(`Server error: ${response.status}`);
