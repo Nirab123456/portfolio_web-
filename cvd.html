@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/Cute-Select.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.css">
     <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-untitled.css">
@@ -42,7 +43,11 @@
                             <div class="row">
                                 <div class="col text-center mt-sm-5 mb-sm-5 ms-sm-2">
                                     <h1 class="display-2 fw-lighter" style="margin: 10px;background: var(--bs-dark);color: var(--bs-body-color);font-family: 'Work Sans', sans-serif;border-radius: 6px;"><strong>Hypertension Stage Detection&nbsp;&nbsp;</strong></h1>
-                                    <p style="margin: 10px;margin-bottom: 10px;background: var(--bs-body-bg);color: var(--bs-body-color);font-weight: bold;border-bottom-color: var(--bs-dark);border-radius: 6px;" class="column">This model is able to get absolute 99.99% accuracy for detecting hypertension in four stages.&nbsp;</p>
+                                    <div class="row row-cols-1 d-sm-flex" style="text-align: center;">
+                                        <div class="col" style="background: var(--bs-dark);border-radius: 6px;transform: scale(0.90);">
+                                            <p style="margin: 10px;margin-bottom: 10px;background: var(--bs-body-bg);color: var(--bs-body-color);font-weight: bold;border-bottom-color: var(--bs-dark);border-radius: 6px;" class="column">This model is able to get absolute 99.99% accuracy for detecting hypertension in four stages.&nbsp;</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -200,9 +205,8 @@
                                                 <div class="row fs-3 text-center d-md-flex">
                                                     <div class="col">
                                                         <div class="fs-6 select" style="width: 323.15px;border-radius: 6px;transform: translate(-18px) scale(0.90);"><select id="activity" style="color: var(--bs-dark);">
-                                                                <option value="1" selected="">Normal</option>
-                                                                <option value="2">Above Normal</option>
-                                                                <option value="3">Extreme</option>
+                                                                <option value="0" selected="">Not active </option>
+                                                                <option value="1">Active </option>
                                                             </select></div>
                                                     </div>
                                                 </div>
@@ -211,16 +215,95 @@
                                     </div>
                                     <div class="col d-md-flex justify-content-md-center align-items-md-center">
                                         <div class="card">
-                                            <div class="card-body"> 
+                                            <div class="card-body">
                                                 <h4 class="card-title">GET Hypertension Stage&nbsp;</h4>
-                                                <p class="card-text">Consult with a medical professional if you require help.</p>
-                                                <h4 style="color: var(--bs-orange);" id="prediction-result" class="card-title">Prediction : Loading......</h4>                                            
+                                                <p class="card-text">Consult with medical professional if you require help.</p>
+                                                <h4 class="card-title" id="prediction-result" style="color: var(--bs-orange);">Prediction : Loading......</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 text-center" style="margin-top: 30px;transform: scale(2);">
                                     <div class="col"><button onclick="CVDsubmitForm()" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="text-align: center;background: var(--bs-danger-text-emphasis);border-bottom-style: solid;border-bottom-color: var(--bs-info);">SUBMIT</button></div>
+                                </div>
+                                <div class="row" style="margin-top: 30px;">
+                                    <div class="col">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-1">
+                                    <div class="col" style="border-radius: 6px;">
+                                        <h1 style="color: var(--bs-dark);text-align: center;background: var(--bs-danger-border-subtle);border-radius: 6px;">Intensity chart&nbsp;</h1>
+                                    </div>
+                                    <div class="col">
+                                        <div class="steps-progressbar">
+                                            <ul>
+                                                <li class="previous" style="font-weight: bold;color: var(--bs-dark);">Normal</li>
+                                                <li class="active" style="font-weight: bold;color: var(--bs-dark);">Evaluated</li>
+                                                <li class="active" style="color: var(--bs-dark);font-weight: bold;">Hypertension 1</li>
+                                                <li class="active" style="color: var(--bs-dark);font-weight: bold;"><br>Hypertension 2</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gy-2 row-cols-1 row-cols-sm-1 row-cols-md-2 d-flex d-xl-flex align-items-center align-items-xl-center" style="margin-top: 30px;">
+                                    <div class="col">
+                                        <div class="card"><img class="card-img w-100 d-block" src="assets/img/cvd_test_score.png">
+                                            <div class="card-img-overlay">
+                                                <div class="row" style="text-align: center;border-radius: 6px;">
+                                                    <div class="col">
+                                                        <h4 style="background: var(--bs-secondary-color);border-bottom-color: rgba(255,255,255,0);border-radius: 6px;">Confusion Metrix : Accuracy: 99.9%</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Result Description&nbsp;</h4>
+                                                <div class="table-responsive" style="color: var(--bs-body-color);">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="color: var(--bs-orange);">CLASS</th>
+                                                                <th style="color: var(--bs-light-bg-subtle);"><strong><span style="color: rgb(255, 255, 255);">Precision</span></strong></th>
+                                                                <th style="color: var(--bs-tertiary-bg);"><strong><span style="color: rgb(252, 252, 253);">Recall</span></strong></th>
+                                                                <th style="color: var(--bs-tertiary-bg);">f1-score</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr style="color: var(--bs-tertiary-bg);">
+                                                                <td style="color: var(--bs-body-color);">Normal</td>
+                                                                <td style="color: var(--bs-tertiary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-secondary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-body-color);">1.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color: var(--bs-body-color);">Evaluated</td>
+                                                                <td style="color: var(--bs-tertiary-bg);">.99</td>
+                                                                <td style="color: var(--bs-secondary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-secondary-bg);">1.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color: var(--bs-body-color);">Hypertension 1</td>
+                                                                <td style="color: var(--bs-tertiary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-secondary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-body-color);">1.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color: var(--bs-body-color);">Hypertension 2</td>
+                                                                <td style="color: var(--bs-tertiary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-tertiary-bg);">1.00</td>
+                                                                <td style="color: var(--bs-tertiary-bg);">1.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p class="card-text" style="margin-top: 5px;">Complete notebook and model can be found in GitHub&nbsp;<a href="#" style="color: var(--bs-body-color);"><i class="icon ion-social-github fs-2"></i></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -250,8 +333,8 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.js"></script>
 </body>
 
 </html>

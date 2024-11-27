@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/Cute-Select.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.css">
     <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-untitled.css">
@@ -23,7 +25,7 @@
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="index"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgb(241,10,10);"><i class="fa fa-plus-circle"></i></span><span>AI Health</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-5">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="cvd" style="color: #ffffff;">CVD Detection&nbsp;</a></li>
                     <li class="nav-item"></li>
                 </ul>
@@ -89,12 +91,63 @@
                                         </div>
                                     </div>
                                 </div>
-                                
 
 
 
 
-                                <div class="col"></div>
+                            </div>
+                            <div class="row gy-3 row-cols-1 row-cols-sm-1 row-cols-md-2 d-flex d-xl-flex align-items-center align-items-xl-center" style="margin-top: 30px;">
+                                <div style="margin-bottom: 5px;" class="col">
+                                    <div class="card"><img class="card-img w-100 d-block" src="assets/img/pn.png">
+                                        <div class="card-img-overlay">
+                                            <div class="row" style="text-align: center;border-radius: 6px;">
+                                                <div class="col">
+                                                    <h4 style="background: var(--bs-secondary-color);border-bottom-color: rgba(255,255,255,0);border-radius: 6px;">Confusion Metrix : Accuracy: 94.11%&nbsp;</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Result Description&nbsp;</h4>
+                                            <div class="table-responsive" style="color: var(--bs-body-color);">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="color: var(--bs-orange);">CLASS</th>
+                                                            <th style="color: var(--bs-light-bg-subtle);"><strong><span style="color: rgb(255, 255, 255);">Precision</span></strong></th>
+                                                            <th style="color: var(--bs-tertiary-bg);"><strong><span style="color: rgb(252, 252, 253);">Recall</span></strong></th>
+                                                            <th style="color: var(--bs-tertiary-bg);">f1-score</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr style="color: var(--bs-tertiary-bg);">
+                                                            <td style="color: var(--bs-body-color);">Normal</td>
+                                                            <td style="color: var(--bs-tertiary-bg);">.96</td>
+                                                            <td style="color: var(--bs-secondary-bg);">.76</td>
+                                                            <td style="color: var(--bs-body-color);">.85</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="color: var(--bs-body-color);">Pneumonia&nbsp;</td>
+                                                            <td style="color: var(--bs-tertiary-bg);">.88</td>
+                                                            <td style="color: var(--bs-secondary-bg);">.98</td>
+                                                            <td style="color: var(--bs-secondary-bg);">.92</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="color: var(--bs-body-color);">Unknown&nbsp;</td>
+                                                            <td style="color: var(--bs-tertiary-bg);">1.00</td>
+                                                            <td style="color: var(--bs-secondary-bg);">1.00</td>
+                                                            <td style="color: var(--bs-body-color);">1.00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p class="card-text" style="margin-top: 5px;">Complete notebook and model can be found in GitHub&nbsp;<a href="#" style="color: var(--bs-body-color);"><i class="icon ion-social-github fs-2"></i></a></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -125,6 +178,7 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
