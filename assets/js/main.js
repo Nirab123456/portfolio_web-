@@ -71,7 +71,6 @@ async function pn_detect() {
         // Convert the difference from milliseconds to days
         const ageInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-        console.log("Age in days:", ageInDays);
         return ageInDays;
     }
 
@@ -136,7 +135,6 @@ async function CVDsubmitForm() {
     // Gather input values
     const age = await calculateAgeInDays();
 
-    console.log("Age:", age);
     let genderIndex;
     if (document.getElementById('btnradio1').checked) {
         genderIndex = 1; // Male
@@ -176,7 +174,6 @@ async function CVDsubmitForm() {
         normalizeInput(value, minValues[index], scaleValues[index])
     );
 
-    console.log("Normalized Inputs:", normalizedInputs);
 
 
     // Run the ONNX model with the normalized inputs
@@ -186,7 +183,6 @@ async function CVDsubmitForm() {
     const predictedStage = hypertensionStages[predicted_class] || "Unknown";
 
 
-    console.log("Predicted Class:", predictedStage);
 
     // Update the HTML to display the prediction
     const resultElement = document.getElementById("prediction-result");
