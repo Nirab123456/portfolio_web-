@@ -57,8 +57,3 @@ select {
 .confmat {
 }
 
-.placeholder {
-  background: var(--bs-light-bg-subtle);
-  color: var(--bs-dark);
-}
-
