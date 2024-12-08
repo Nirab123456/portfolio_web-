@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="en" style="overflow: visible;">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>rimajumder</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -16,8 +19,7 @@
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
     <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.css">
-    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-untitled.css">
+    <link rel="stylesheet" href="assets/css/Ultimate-Testimonial-Slider-BS4-Updated.css">
     <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
 
 </head>
@@ -34,7 +36,7 @@
             </div>
         </div>
     </nav>
-    <main>
+    <main style="overflow: hidden;">
         <section>
             <div class="row">
                 <div class="col">
@@ -42,189 +44,177 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center mt-sm-5 mb-sm-5 ms-sm-2">
-                                    <h1 class="display-2 fw-lighter" style="margin: 10px;background: var(--bs-dark);color: var(--bs-body-color);font-family: 'Work Sans', sans-serif;border-radius: 6px;"><strong>Hypertension Stage Detection&nbsp;&nbsp;</strong></h1>
+                                    <h1 class="display-2 fw-lighter" style="margin: 10px;background: var(--bs-dark);color: var(--bs-body-color);font-family: 'Berkshire Swash', serif;border-radius: 6px;"><strong>Hypertension Stage Detection&nbsp;&nbsp;</strong></h1>
                                     <div class="row row-cols-1 d-sm-flex" style="text-align: center;">
                                         <div class="col" style="background: var(--bs-dark);border-radius: 6px;transform: scale(0.90);">
-                                            <p style="margin: 10px;margin-bottom: 10px;background: var(--bs-body-bg);color: var(--bs-body-color);font-weight: bold;border-bottom-color: var(--bs-dark);border-radius: 6px;" class="column">This model is able to get absolute 99.99% accuracy for detecting hypertension in four stages.&nbsp;</p>
+                                            <p style="margin: 10px;margin-bottom: 10px;background: var(--bs-body-bg);color: var(--bs-body-color);border-bottom-color: var(--bs-dark);border-radius: 6px;font-family: 'Berkshire Swash', serif;font-size: 20px;" class="column">This model is able to get absolute 99.99% accuracy for detecting hypertension in four stages.&nbsp;</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <h1 class="text-center" style="color: var(--bs-dark);background: var(--bs-danger-border-subtle);border-radius: 10px;">Provide Accurate data for best result&nbsp;</h1>
-                                <div class="row gy-2 row-cols-1 row-cols-md-2 d-md-flex d-lg-flex align-items-lg-center">
+                                <h1 class="text-center" style="color: var(--bs-dark);background: var(--bs-danger-border-subtle);border-radius: 10px;font-family: 'Berkshire Swash', serif;">Provide Accurate data for best result&nbsp;</h1>
+                                <div class="row">
                                     <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">1.Birth Day&nbsp;</h4>
-                                                <div class="row text-end d-md-flex">
-                                                    <div class="col"><input id="age" type="date"></div>
-                                                    <div class="col d-md-flex">
-                                                        <p><strong>INPUT DATE&nbsp;</strong></p>
+                                        <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" id="carousel-t" style="color: var(--bs-dark);">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>1.Birth Day&nbsp;</h4>
+                                                        <div class="row">
+                                                            <div class="col"><input id="age" type="date"></div>
+                                                            <div class="col">
+                                                                <p><strong>INPUT DATE&nbsp;</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>2.Biological Gender&nbsp;</h4>
+                                                        <div class="row fs-3 text-center d-md-flex" id="gender">
+                                                            <div class="col">
+                                                                <div class="btn-group btn-group-toggle" data-bs-toggle="buttons"><input type="radio" id="btnradio1" name="btnradio"><i class="fa fa-male" style="color: var(--bs-info);padding-left: 5px;"></i></div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div><input type="radio" id="btnradio1-1" name="btnradio"><i class="fa fa-female" style="color: var(--bs-pink);padding-left: 5px;"></i></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>3.Hight</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center">
+                                                            <div class="col d-flex justify-content-center align-items-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center align-items-xxl-center" style="text-align: center;"><input class="d-lg-flex all-input" type="number" id="hight" style="display: inline;width: 142.4px;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;transform: scale(0.80);"></div>
+                                                            <div class="col text-center d-flex d-sm-flex justify-content-center align-items-center justify-content-sm-center" style="text-align: center;">
+                                                                <p class="d-lg-flex justify-content-lg-center align-items-lg-center pt-0 mb-0" style="width: 52.6px;font-size: 25px;"><strong>CM</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>4.Weight</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center">
+                                                            <div class="col d-flex justify-content-center align-items-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center align-items-xxl-center" style="text-align: center;"><input class="d-lg-flex all-input" type="number" id="weight" style="display: inline;width: 142.4px;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;transform: scale(0.80);"></div>
+                                                            <div class="col text-center d-flex d-sm-flex justify-content-center align-items-center justify-content-sm-center" style="text-align: center;">
+                                                                <p class="d-lg-flex justify-content-lg-center align-items-lg-center pt-0 mb-0" style="width: 52.6px;font-size: 25px;"><strong>KG</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>5.Systolic BP</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center">
+                                                            <div class="col d-flex justify-content-center align-items-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center align-items-xxl-center" style="text-align: center;"><input class="d-lg-flex all-input" type="number" id="systolic" style="display: inline;width: 142.4px;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;transform: scale(0.80);"></div>
+                                                            <div class="col text-center d-flex d-sm-flex justify-content-center align-items-center justify-content-sm-center" style="text-align: center;">
+                                                                <p class="d-lg-flex justify-content-lg-center align-items-lg-center pt-0 mb-0" style="width: 52.6px;font-size: 25px;"><strong>Bpm</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>6.Diastolic BP</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center">
+                                                            <div class="col d-flex justify-content-center align-items-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center align-items-xxl-center" style="text-align: center;"><input class="d-lg-flex all-input" type="number" id="diastolic" style="display: inline;width: 142.4px;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;transform: scale(0.80);"></div>
+                                                            <div class="col text-center d-flex d-sm-flex justify-content-center align-items-center justify-content-sm-center" style="text-align: center;">
+                                                                <p class="d-lg-flex justify-content-lg-center align-items-lg-center pt-0 mb-0" style="width: 52.6px;font-size: 25px;"><strong>Bpm</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>7.Cholesterol Level</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                                            <div class="col fs-1 d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="transform: scale(0.80);">
+                                                                <div class="fs-6 d-flex justify-content-center align-items-center select column" style="width: 323.15px;border-radius: 6px;"><select id="cholesterol" style="color: var(--bs-dark);">
+                                                                        <option value="1" selected="">Normal</option>
+                                                                        <option value="2">Above Normal</option>
+                                                                        <option value="3">Extreme</option>
+                                                                    </select></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>8.Glucose Level</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                                            <div class="col fs-1 d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="transform: scale(0.80);">
+                                                                <div class="fs-6 d-flex justify-content-center align-items-center select column" style="width: 323.15px;border-radius: 6px;"><select id="glucose" style="color: var(--bs-dark);">
+                                                                        <option value="1" selected="">Normal</option>
+                                                                        <option value="2">Above Normal</option>
+                                                                        <option value="3">Extreme</option>
+                                                                    </select></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>9.Smoker&nbsp;<i class="icon ion-fireball" style="color: var(--bs-yellow);"></i>&nbsp;?</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                                            <div class="col fs-1 d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="transform: scale(0.80);">
+                                                                <div class="fs-6 d-flex justify-content-center align-items-center select column" style="width: 323.15px;border-radius: 6px;"><select id="smoke" style="color: var(--bs-dark);">
+                                                                        <option value="0" selected="">No</option>
+                                                                        <option value="1">Yes</option>
+                                                                    </select></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4>10.Alcohole<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bottle-filled" style="color: var(--bs-form-invalid-color);">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path d="M13 1a2 2 0 0 1 1.995 1.85l.005 .15v.5c0 1.317 .381 2.604 1.094 3.705l.17 .25l.05 .072a9.093 9.093 0 0 1 1.68 4.92l.006 .354v6.199a3 3 0 0 1 -2.824 2.995l-.176 .005h-6a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-6.2a9.1 9.1 0 0 1 1.486 -4.982l.2 -.292l.05 -.069a6.823 6.823 0 0 0 1.264 -3.957v-.5a2 2 0 0 1 1.85 -1.995l.15 -.005h2zm.362 5h-2.724a8.827 8.827 0 0 1 -1.08 2.334l-.194 .284l-.05 .069a7.091 7.091 0 0 0 -1.307 3.798l-.003 .125a3.33 3.33 0 0 1 1.975 -.61a3.4 3.4 0 0 1 2.833 1.417c.27 .375 .706 .593 1.209 .583a1.4 1.4 0 0 0 1.166 -.583a3.4 3.4 0 0 1 .81 -.8l.003 .183c0 -1.37 -.396 -2.707 -1.137 -3.852l-.228 -.332a8.827 8.827 0 0 1 -1.273 -2.616z" stroke-width="0" fill="currentColor"></path>
+                                                            </svg>&nbsp;</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                                            <div class="col fs-1 d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="transform: scale(0.80);">
+                                                                <div class="fs-6 d-flex justify-content-center align-items-center select column" style="width: 323.15px;border-radius: 6px;"><select id="alchole" style="color: var(--bs-dark);">
+                                                                        <option value="0" selected="">No</option>
+                                                                        <option value="1">Yes</option>
+                                                                    </select></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-9 text-center mx-auto testimonial-content">
+                                                        <h4 style="font-family: 'Work Sans', sans-serif;">11.Physical Activity?</h4>
+                                                        <div class="row fs-3 text-center d-flex d-md-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                                            <div class="col fs-1 d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="transform: scale(0.80);">
+                                                                <div class="fs-6 d-flex justify-content-center align-items-center select column" style="width: 323.15px;border-radius: 6px;"><select id="activity" style="color: var(--bs-dark);">
+                                                                        <option value="0" selected="">Not Active</option>
+                                                                        <option value="1">Active</option>
+                                                                    </select></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div><a class="carousel-control-prev" href="#carousel-t" role="button" data-bs-slide="prev" style="background: var(--bs-tertiary-color);"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-t" role="button" data-bs-slide="next" style="background: var(--bs-tertiary-color);"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                                            <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-t" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="3"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="4"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="5"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="6"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="7"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="8"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="9"></button> <button type="button" data-bs-target="#carousel-t" data-bs-slide-to="10"></button></div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" id="gender" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">2.Biological Gender&nbsp;</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col">
-                                                        <div class="btn-group btn-group-toggle" data-bs-toggle="buttons"><input type="radio" id="btnradio1" name="btnradio"><i class="fa fa-male" style="color: var(--bs-info);padding-left: 5px;"></i></div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div><input type="radio" id="btnradio1-1" name="btnradio"><i class="fa fa-female" style="color: var(--bs-pink);padding-left: 5px;"></i></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">3.Hight</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col"><input type="number" id="hight" style="display: inline;width: 142.4px;"></div>
-                                                    <div class="col">
-                                                        <p style="width: 52.6px;"><strong>CM</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">4.Weight</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col"><input type="number" id="weight" style="display: inline;width: 142.4px;"></div>
-                                                    <div class="col">
-                                                        <p style="width: 52.6px;"><strong>KG</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">5.Systolic BP</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col"><input type="number" id="systolic" style="display: inline;width: 142.4px;"></div>
-                                                    <div class="col">
-                                                        <p style="width: 70px;"><strong>bpm</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">6.Diastolic BP</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col"><input type="number" id="diastolic" style="display: inline;width: 142.4px;"></div>
-                                                    <div class="col">
-                                                        <p style="width: 70px;"><strong>bpm</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">7.Cholesterol Level</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col fs-1">
-                                                        <div class="fs-6 select column" style="width: 323.15px;border-radius: 6px;"><select id="cholesterol" style="color: var(--bs-dark);">
-                                                                <option value="1" selected="">Normal</option>
-                                                                <option value="2">Above Normal</option>
-                                                                <option value="3">Extreme</option>
-                                                            </select></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">8.Glucode Level</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col">
-                                                        <div class="fs-6 select" style="width: 323.15px;border-radius: 6px;transform: translate(-18px) scale(0.90);"><select id="glucose" style="color: var(--bs-dark);">
-                                                                <option value="1" selected="">Normal</option>
-                                                                <option value="2">Above Normal</option>
-                                                                <option value="3">Extreme</option>
-                                                            </select></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">9.Smoker&nbsp;<i class="icon ion-fireball" style="color: var(--bs-yellow);"></i>&nbsp;?</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col" style="transform: translate(-18px) scale(0.90);">
-                                                        <div class="fs-6 select" style="width: 323.15px;border-radius: 6px;"><select id="smoke" style="color: var(--bs-dark);">
-                                                                <option value="1">Yes</option>
-                                                                <option value="0" selected="">No</option>
-                                                            </select></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">10.Alcohole<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bottle-filled" style="color: var(--bs-form-invalid-color);">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                        <path d="M13 1a2 2 0 0 1 1.995 1.85l.005 .15v.5c0 1.317 .381 2.604 1.094 3.705l.17 .25l.05 .072a9.093 9.093 0 0 1 1.68 4.92l.006 .354v6.199a3 3 0 0 1 -2.824 2.995l-.176 .005h-6a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-6.2a9.1 9.1 0 0 1 1.486 -4.982l.2 -.292l.05 -.069a6.823 6.823 0 0 0 1.264 -3.957v-.5a2 2 0 0 1 1.85 -1.995l.15 -.005h2zm.362 5h-2.724a8.827 8.827 0 0 1 -1.08 2.334l-.194 .284l-.05 .069a7.091 7.091 0 0 0 -1.307 3.798l-.003 .125a3.33 3.33 0 0 1 1.975 -.61a3.4 3.4 0 0 1 2.833 1.417c.27 .375 .706 .593 1.209 .583a1.4 1.4 0 0 0 1.166 -.583a3.4 3.4 0 0 1 .81 -.8l.003 .183c0 -1.37 -.396 -2.707 -1.137 -3.852l-.228 -.332a8.827 8.827 0 0 1 -1.273 -2.616z" stroke-width="0" fill="currentColor"></path>
-                                                    </svg>&nbsp;</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col">
-                                                        <div class="fs-6 select" style="width: 323.15px;border-radius: 6px;transform: translate(-18px) scale(0.90);"><select id="alchole" style="color: var(--bs-dark);">
-                                                                <option value="0" selected="">No</option>
-                                                                <option value="1">Yes</option>
-                                                            </select></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-body" style="background: var(--bs-dark);color: var(--bs-body-color);border-radius: 6px;">
-                                                <h4 class="card-title">11.Physically Active ?</h4>
-                                                <div class="row fs-3 text-center d-md-flex">
-                                                    <div class="col">
-                                                        <div class="fs-6 select" style="width: 323.15px;border-radius: 6px;transform: translate(-18px) scale(0.90);"><select id="activity" style="color: var(--bs-dark);">
-                                                                <option value="0" selected="">Not active </option>
-                                                                <option value="1">Active </option>
-                                                            </select></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="row gy-2 row-cols-1 d-md-flex d-lg-flex align-items-lg-center">
                                     <div class="col d-md-flex justify-content-md-center align-items-md-center">
-                                        <div class="card">
+                                        <div class="card" style="background: rgb(215,215,215);">
                                             <div class="card-body">
-                                                <h4 class="card-title">GET Hypertension Stage&nbsp;</h4>
-                                                <p class="card-text">Consult with medical professional if you require help.</p>
-                                                <h4 class="card-title" id="prediction-result" style="color: var(--bs-orange);">Prediction : Loading......</h4>
+                                                <h4 class="card-title" style="color: var(--bs-dark);font-family: Anton, sans-serif;font-size: 30px;">GET Hypertension Stage&nbsp;</h4>
+                                                <p class="card-text" style="color: var(--bs-dark);font-family: 'Roboto Condensed', sans-serif;font-size: 30px;">Consult with medical professional if you require help.</p>
+                                                <h4 class="card-title" id="prediction-result" style="color: var(--bs-form-invalid-color);font-family: 'Berkshire Swash', serif;">Prediction : Loading......</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 text-center" style="margin-top: 30px;transform: scale(2);">
-                                    <div class="col"><button onclick="CVDsubmitForm()" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="text-align: center;background: var(--bs-danger-text-emphasis);border-bottom-style: solid;border-bottom-color: var(--bs-info);">SUBMIT</button></div>
+                                    <div class="col"><button onclick="CVDsubmitForm()" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="text-align: center;background: var(--bs-danger-text-emphasis);border-bottom-style: solid;border-bottom-color: var(--bs-info);font-family: 'Roboto Condensed', sans-serif;">SUBMIT</button></div>
                                 </div>
                                 <div class="row" style="margin-top: 30px;">
                                     <div class="col">
@@ -233,15 +223,15 @@
                                 </div>
                                 <div class="row row-cols-1">
                                     <div class="col" style="border-radius: 6px;">
-                                        <h1 style="color: var(--bs-dark);text-align: center;background: var(--bs-danger-border-subtle);border-radius: 6px;">Intensity chart&nbsp;</h1>
+                                        <h1 style="color: var(--bs-dark);text-align: center;background: var(--bs-danger-border-subtle);border-radius: 6px;font-family: 'Berkshire Swash', serif;">Intensity chart&nbsp;</h1>
                                     </div>
                                     <div class="col">
                                         <div class="steps-progressbar">
                                             <ul>
-                                                <li class="previous" style="font-weight: bold;color: var(--bs-dark);">Normal</li>
-                                                <li class="active" style="font-weight: bold;color: var(--bs-dark);">Evaluated</li>
-                                                <li class="active" style="color: var(--bs-dark);font-weight: bold;">Hypertension 1</li>
-                                                <li class="active" style="color: var(--bs-dark);font-weight: bold;"><br>Hypertension 2</li>
+                                                <li class="previous" style="font-weight: bold;color: var(--bs-dark);font-family: 'Berkshire Swash', serif;">Normal</li>
+                                                <li class="active" style="font-weight: bold;color: var(--bs-dark);font-family: 'Berkshire Swash', serif;">Evaluated</li>
+                                                <li class="active" style="color: var(--bs-dark);font-weight: bold;font-family: 'Berkshire Swash', serif;">Hypertension 1</li>
+                                                <li class="active" style="color: var(--bs-dark);font-weight: bold;font-family: 'Berkshire Swash', serif;"><br>Hypertension 2</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -300,7 +290,7 @@
                                                         </tbody>
                                                     </table>
                                                 </div>
-                                                <p class="card-text" style="margin-top: 5px;">Complete notebook and model can be found in GitHub&nbsp;<a href="https://github.com/Nirab123456/portfolio_web_backend-/tree/main/cvd_detaction" style="color: var(--bs-body-color);"><i class="icon ion-social-github fs-2"></i></a></p>
+                                                <p class="card-text" style="margin-top: 5px;">Complete notebook and model can be found in GitHub&nbsp;<a href="#" style="color: var(--bs-body-color);"><i class="icon ion-social-github fs-2"></i></a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -335,7 +325,6 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.js"></script>
 </body>
 
 </html>
