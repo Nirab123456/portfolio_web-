@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>rimajumder</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/Cute-Select.css">
+    <link rel="stylesheet" href="assets/css/Drag-Drop-File-Input-Upload.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
     <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="background: url(&quot;assets/img/rb_2148485213.png&quot;) center / contain repeat;">
+<body>
     <nav class="navbar navbar-expand-md bg-dark py-3" data-bs-theme="dark">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgb(241,10,10);"><i class="fa fa-plus-circle"></i></span><span>AI Health</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index"><span class="d-flex justify-content-center align-items-center bs-icon-sm bs-icon-rounded bs-icon-primary me-2 bs-icon" style="background:rgb(241,10,10);"><i class="fas fa-plus-circle"></i></span><span>AI Health</span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-5" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-5">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="contact">Contact Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cvd" style="color: #ffffff;">CVD Detection&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cvd" style="color:#ffffff;">CVD Detection&nbsp;</a></li>
                     <li class="nav-item"></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main style="overflow: hidden;">
+    <main style="overflow:hidden;">
         <section>
             <div class="row">
                 <div class="col">
@@ -38,111 +41,106 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center mt-sm-5 mb-sm-5 ms-sm-2">
-                                    <h1 class="display-2 fw-lighter" style="margin: 10px;background: var(--bs-dark);color: var(--bs-body-color);font-family: 'Work Sans', sans-serif;border-radius: 6px;"><strong>Pneumonia Detection From X-Ray&nbsp;</strong></h1>
-                                    <p style="margin: 10px;margin-bottom: 10px;background: var(--bs-body-bg);color: var(--bs-body-color);font-weight: bold;border-bottom-color: var(--bs-dark);border-radius: 6px;" class="column">This model is able to gain 90.87% accuracy on unknown test</p>
+                                    <h1 class="display-2 fw-lighter" style="margin:10px;background:var(--bs-secondary-text-emphasis);color:var(--bs-body-color);font-family:'Alegreya Sans SC', sans-serif;border-radius:6px;">Tuberculosis &amp; pneumonia<strong>&nbsp;Detect From X-Ray&nbsp;</strong></h1>
+                                    <p style="margin:10px;margin-bottom:10px;background:var(--bs-gray-800);color:var(--bs-body-color);font-weight:bold;border-bottom-color:var(--bs-dark);border-radius:6px;font-family:'Roboto Condensed', sans-serif;" class="column">State of the art&nbsp; gaining 94.5% overall accuracy</p>
                                 </div>
                             </div>
                             <div class="row gy-2 row-cols-1 row-cols-md-2 d-lg-flex align-items-lg-center">
-
-
-
                                 <div class="col">
-                                    <div class="card">
+                                    <div class="card" style="background: rgb(43,47,50);">
                                         <div class="card-body">
-                                            <h4 class="card-title">Upload Image</h4>
-                                            <p class="card-text">Try Providing original photo(data) for better result</p>
+                                            <h4 class="card-title" style="font-family: 'Alegreya Sans SC', sans-serif;">Upload Image</h4>
                                             
-                                            <!-- Image input -->
-                                            <input type="file" id="imageUpload" accept="image/*" required>
-                                            
-                                            <!-- Submit button -->
-                                            <div class="row">
-                                                <div class="col text-center">
-                                                    <button 
-
-                                                        onclick="pn_detect()"
-                                                        
-                                                        class="btn btn-primary" 
-                                                        data-bss-hover-animate="pulse" 
-                                                        id="submitButton" 
-                                                        type="button" 
-                                                        style="margin: initial; margin-top: 10px;">
-                                                        Check
-                                                    </button>
+                                            <!-- Image Upload Section -->
+                                            <div id="imageuploadview">
+                                                <p class="card-text" style="font-family: 'Roboto Condensed', sans-serif;">
+                                                    Try Providing original photo(data) for better result.
+                                                </p>
+                                                <div class="files color form-group mb-3" style="color: rgb(43,47,50); background: #2b2f32;">
+                                                    <input type="file" accept="image/*" id="imageUpload" required="" style="background: rgb(43,47,50); font-family: 'Roboto Condensed', sans-serif;">
                                                 </div>
                                             </div>
+                                            
+                                            <!-- Image Preview Section -->
+                                            <div class="text-center" id="imagePreview" style="margin-top: 20px; display: none;"></div>
+                                
+                                            <!-- Buttons for Retry and Check -->
+                                            <div class="row" id="retryCheckRow" style="display: none; margin-top: 10px;">
+                                                <!-- Check Button -->
+                                                <div class="col text-center">
+                                                    <button onclick="pn_detect()" class="btn btn-primary" data-bss-hover-animate="pulse" id="checkButton" type="button" style="margin-top: 10px;">Check</button>
+                                                </div>
+                                                <!-- Retry Button -->
+                                                <div class="col text-center">
+                                                    <button class="btn btn-primary" data-bss-hover-animate="pulse" id="retryButton" type="button" style="margin-top: 10px; background: var(--bs-danger);">Retry</button>
+                                                </div>
+                                            </div>
+                                
                                         </div>
                                     </div>
                                 </div>
                                 
+                                
+                                
                                 <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Result</h4>
-                                            <p class="card-text">Please note this model stand-alone is not human replaceable. Consult a specialist if you need to. Thank you.</p>
-                                            
-                                            <!-- Prediction Result -->
-
-                                            <h3 id="resultDisplay" style="background: var(--bs-dark); color: var(--bs-body-color);">
-                                                Waiting for input...
-                                            </h3>
+                                    <div class="card" style="background:rgb(19,20,22);">
+                                        <div class="card-body" style="background:#131416;">
+                                            <h4 class="card-title" style="font-family:'Alegreya Sans SC', sans-serif;">Result</h4>
+                                            <p class="card-text" style="font-family:'Roboto Condensed', sans-serif;">Please note this model stand-alone is not human replaceable. Consult a specialist if you need to. Thank you.</p>
+                                            <h3 id="resultDisplay" style="background:rgb(19,20,22);color:var(--bs-body-color);font-family:'Berkshire Swash', serif;"> Waiting for input... </h3>
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
                             </div>
-                            <div class="row gy-3 row-cols-1 row-cols-sm-1 row-cols-md-2 d-flex d-xl-flex align-items-center align-items-xl-center" style="margin-top: 30px;">
-                                <div style="margin-bottom: 5px;" class="col">
-                                    <div class="card"><img class="card-img w-100 d-block" src="assets/img/pn.png">
-                                        <div class="card-img-overlay">
-                                            <div class="row" style="text-align: center;border-radius: 6px;">
-                                                <div class="col">
-                                                    <h4 style="background: var(--bs-secondary-color);border-bottom-color: rgba(255,255,255,0);border-radius: 6px;">Confusion Metrix : Accuracy: 94.11%&nbsp;</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="row gy-3 row-cols-1 row-cols-sm-1 row-cols-md-2 d-flex d-xl-flex align-items-center align-items-xl-center" style="margin-top:30px;">
+                                <div class="col" style="margin-bottom:5px;">
+                                    <div class="card"><img class="card-img-top w-100 d-block card-img-top w-100 card-img w-100" src="assets/img/model_22_confusion_matrix.png">
+                                        <div class="card-img-overlay"></div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Result Description&nbsp;</h4>
-                                            <div class="table-responsive" style="color: var(--bs-body-color);">
+                                            <h4 class="card-title" style="font-family:'Alegreya Sans SC', sans-serif;">Result Description&nbsp;</h4>
+                                            <div class="table-responsive" style="color:var(--bs-body-color);">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
-                                                            <th style="color: var(--bs-orange);">CLASS</th>
-                                                            <th style="color: var(--bs-light-bg-subtle);"><strong><span style="color: rgb(255, 255, 255);">Precision</span></strong></th>
-                                                            <th style="color: var(--bs-tertiary-bg);"><strong><span style="color: rgb(252, 252, 253);">Recall</span></strong></th>
-                                                            <th style="color: var(--bs-tertiary-bg);">f1-score</th>
+                                                            <th style="color:var(--bs-orange);">CLASS</th>
+                                                            <th style="color:var(--bs-light-bg-subtle);"><span style="color:rgb(255, 255, 255);">Precision</span></th>
+                                                            <th style="color:var(--bs-tertiary-bg);"><span style="color:rgb(252, 252, 253);">Recall</span></th>
+                                                            <th style="color:var(--bs-tertiary-bg);">f1-score</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr style="color: var(--bs-tertiary-bg);">
-                                                            <td style="color: var(--bs-body-color);">Normal</td>
-                                                            <td style="color: var(--bs-tertiary-bg);">.96</td>
-                                                            <td style="color: var(--bs-secondary-bg);">.76</td>
-                                                            <td style="color: var(--bs-body-color);">.85</td>
+                                                        <tr style="color:var(--bs-tertiary-bg);">
+                                                            <td style="color:var(--bs-body-color);">Normal</td>
+                                                            <td style="color:var(--bs-tertiary-bg);">.93</td>
+                                                            <td style="color:var(--bs-secondary-bg);">.79</td>
+                                                            <td style="color:var(--bs-body-color);">.86</td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="color: var(--bs-body-color);">Pneumonia&nbsp;</td>
-                                                            <td style="color: var(--bs-tertiary-bg);">.88</td>
-                                                            <td style="color: var(--bs-secondary-bg);">.98</td>
-                                                            <td style="color: var(--bs-secondary-bg);">.92</td>
+                                                            <td style="color:var(--bs-body-color);">Pneumonia&nbsp;</td>
+                                                            <td style="color:var(--bs-tertiary-bg);">.90</td>
+                                                            <td style="color:var(--bs-secondary-bg);">.97</td>
+                                                            <td style="color:var(--bs-secondary-bg);">.93</td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="color: var(--bs-body-color);">Unknown&nbsp;</td>
-                                                            <td style="color: var(--bs-tertiary-bg);">1.00</td>
-                                                            <td style="color: var(--bs-secondary-bg);">1.00</td>
-                                                            <td style="color: var(--bs-body-color);">1.00</td>
+                                                            <td style="color:var(--bs-body-color);">Unknown&nbsp;</td>
+                                                            <td style="color:var(--bs-tertiary-bg);">1.00</td>
+                                                            <td style="color:var(--bs-secondary-bg);">1.00</td>
+                                                            <td style="color:var(--bs-body-color);">1.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="color:var(--bs-body-color);">Tuberculosis</td>
+                                                            <td style="color:var(--bs-tertiary-bg);">.95</td>
+                                                            <td style="color:var(--bs-secondary-bg);">.97</td>
+                                                            <td style="color:var(--bs-body-color);">.96</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            <p class="card-text" style="margin-top: 5px;">Complete notebook and model can be found in GitHub&nbsp;<a href="https://github.com/Nirab123456/portfolio_web_backend-/tree/main/pn_detection" style="color: var(--bs-body-color);"><i class="icon ion-social-github fs-2"></i></a></p>
+                                            <p class="card-text" style="margin-top:5px;font-family:'Roboto Condensed', sans-serif;">Complete notebook and model can be found in GitHub&nbsp;<a href="https://github.com/Nirab123456/portfolio_web_backend-/tree/main/pn_detection" style="color:var(--bs-body-color);"><i class="icon ion-social-github fs-2"></i></a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -159,15 +157,15 @@
                 <div class="col-md-6 text-center text-md-start d-md-flex justify-content-md-start align-items-md-center py-2">
                     <div>
                         <p class="fs-5 fw-bold mb-0">Created By Raf</p>
-                        <p class="mb-0">Made with&nbsp;<i class="fas fa-heart"></i> in Canada</p><a href="contact" style="color: var(--bs-secondary-color);">
-                            <p class="mb-0" style="color: var(--bs-info-border-subtle);font-size: 20px;">Contact me&nbsp;</p>
+                        <p class="mb-0">Made with&nbsp;<i class="fas fa-heart"></i> in Canada</p><a href="contact" style="color:var(--bs-secondary-color);">
+                            <p class="mb-0" style="color:var(--bs-info-border-subtle);font-size:20px;">Contact me&nbsp;</p>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center align-items-center justify-content-md-end py-2" style="color: var(--bs-primary);">
+                <div class="col-md-6 d-flex justify-content-center align-items-center justify-content-md-end py-2" style="color:var(--bs-primary);">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"></li>
-                        <li class="list-inline-item"><a href="https://github.com/Nirab123456" style="color: var(--bs-body-color);"><i class="fab fa-github fs-1 me-2"></i></a><a href="https://www.linkedin.com/in/rifatul-islam-majumder/" style="color: var(--bs-info);"><i class="fab fa-linkedin fs-1 me-2"></i></a><a href="https://www.instagram.com/rifatul.nirab/" style="color: var(--bs-code-color);"><i class="fab fa-instagram fs-1 me-2"></i></a></li>
+                        <li class="list-inline-item list-inline-item list-inline-item"></li>
+                        <li class="list-inline-item list-inline-item list-inline-item"><a href="https://github.com/Nirab123456" style="color:var(--bs-body-color);"><i class="fab fa-github fs-1 me-2"></i></a><a href="https://www.linkedin.com/in/rifatul-islam-majumder/" style="color:var(--bs-info);"><i class="fab fa-linkedin fs-1 me-2"></i></a><a href="https://www.instagram.com/rifatul.nirab/" style="color:var(--bs-code-color);"><i class="fab fa-instagram fs-1 me-2"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -176,7 +174,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product-swiper.min.js"></script>
 </body>
 
 </html>

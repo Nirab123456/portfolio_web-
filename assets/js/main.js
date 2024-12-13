@@ -18,7 +18,7 @@ async function pn_detect() {
         resultDisplay.innerText = "Processing...";
         resultDisplay.style.color = "blue"; // Reset to default text color while processing
 
-    const response = await fetch('https://pneumonia-detectorcpu-production.up.railway.app/predict', { // Tornado server URL
+    const response = await fetch('https://tuberculosis-pneumoniaweb-production.up.railway.app/predict', { // Tornado server URL
         method: 'POST',
         body: formData
     });
@@ -38,7 +38,10 @@ async function pn_detect() {
             resultDisplay.style.color = "green"; // Highlight NORMAL in green
         } else if (prediction === "UNKNOWN") {
             resultDisplay.style.color = "white"; // Regular black color for UNKNOWN
+        }else if (prediction === "TUBERCULOSIS") {
+            resultDisplay.style.color = "yellow"; // Highlight TUBERCULOSIS in yellow
         }
+        
     } catch (error) {
         console.error('Error:', error);
         resultDisplay.innerText = 'Error during prediction. Check console for details.';
@@ -189,3 +192,51 @@ async function CVDsubmitForm() {
     resultElement.innerHTML = `<strong>Prediction: </strong>${predictedStage}`;
 
 }
+
+
+
+
+const imageUpload = document.getElementById("imageUpload");
+const imagePreview = document.getElementById("imagePreview");
+const imageUploadView = document.getElementById("imageuploadview");
+const retryButton = document.getElementById("retryButton");
+const retryCheckRow = document.getElementById("retryCheckRow");
+
+// Event listener for image upload
+imageUpload.addEventListener("change", function (event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            // Show preview and retry/check row, hide upload view and single check row
+            imageUploadView.style.display = "none";
+            imagePreview.style.display = "block";
+            imagePreview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image" style="max-width: 100%; height: auto; border-radius: 5px;">`;
+
+            retryCheckRow.style.display = "flex"; // Show row with Check and Retry buttons
+        };
+
+        reader.readAsDataURL(file); // Read the file as a data URL
+    } else {
+        resetViews();
+    }
+});
+
+// Event listener for retry button
+retryButton.addEventListener("click", function () {
+    // Clear the file input and reset the view
+    imageUpload.value = ""; // Reset the input field
+    resetViews();
+});
+
+// Function to reset the views
+function resetViews() {
+    imageUploadView.style.display = "block"; // Show the upload view
+    imagePreview.style.display = "none"; // Hide the preview
+    imagePreview.innerHTML = ""; // Clear preview content
+
+    retryCheckRow.style.display = "none"; // Hide row with Check and Retry buttons
+}
+
