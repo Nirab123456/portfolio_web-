@@ -12,13 +12,13 @@
 
 #carousel-t .carousel-control-prev {
   background: -webkit-linear-gradient(left, rgb(215,215,215) 70%,rgba(215,215,215,0) 100%);
-  background: linear-gradient(to right, rgb(215,215,215) 70%,rgba(215,215,215,0) 100%);
+  background: linear-gradient(to right, rgb(108,117,125) 70%,rgba(215,215,215,0) 100%);
   opacity: 1;
 }
 
 #carousel-t .carousel-control-next {
   background: -webkit-linear-gradient(right, rgba(215,215,215) 70%,rgba(215,215,215,0) 100%);
-  background: linear-gradient(to left, rgb(215,215,215) 70%,rgba(215,215,215,0) 100%);
+  background: linear-gradient(to left, rgb(108,117,125) 70%,rgba(215,215,215,0) 100%);
   opacity: 1;
 }
 

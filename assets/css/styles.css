@@ -36,19 +36,28 @@ footer {
   background: var(--bs-gray-900);
 }
 
-@media (min-width: 768px) {
-  h4 {
-  }
-}
-
-h4 {
-}
-
 @media (min-width: 300px) {
   .col-project {
   }
 }
 
 .row .section {
+}
+
+. {
+}
+
+@media (min-width: 768px) {
+  .h4.card {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-heading {
+    font-size: 30px;
+    transform: scale(1);
+    font-family: 'Work Sans', sans-serif;
+  }
 }
 
